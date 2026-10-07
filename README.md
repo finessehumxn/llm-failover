@@ -17,9 +17,14 @@ The core is a handful of small modules (router, error taxonomy, breaker, backoff
 ## Quickstart
 
 ```bash
-pip install "llm-failover[anthropic,openai]"   # or just llm-failover for the core
+pip install "llm-failover[anthropic,openai] @ git+https://github.com/finessehumxn/llm-failover"
+# core only, no vendor SDKs:
+pip install "git+https://github.com/finessehumxn/llm-failover"
 python -m llm_failover.demo                    # offline walkthrough, no keys needed
 ```
+
+> Not on PyPI. A different, unrelated package already uses the name `llm-failover` there, so install from this repository as shown.
+
 
 ```python
 import asyncio
